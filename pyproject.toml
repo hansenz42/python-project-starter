@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "poetry-scaffold"
+version = "0.1.0"
+description = ""
+authors = ["Hansen <xxxx@xxxx.com>"]
+readme = "README.md"
+packages = [
+    { include = "*", from = "src"}
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0"
+pytest = "^7.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
