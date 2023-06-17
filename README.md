@@ -126,8 +126,8 @@ debug 和 info level 的日志将输出到 stdout，warning 和 error level 的�
 ## 8. 运行
 
 程序将按照顺序指定运行环境： 
-1. 环境变量：`PYTHON_SERVICE_ENV` ，如 `PYTHON_SERVICE_ENV=dev python3 main.py`
-2. 命令行实参：如 `python3 main.py -e dev`
+1. 环境变量：`PYTHON_SERVICE_ENV` ，如 `PYTHON_SERVICE_ENV=dev poetry run python3 main.py`
+2. 命令行实参：如 `poetry run python3 main.py -e dev`
 
 如果程序没有接收到任何参数，或接受了 dev/test/prod 以外的参数，则默认使用 `dev` 环境。
 
