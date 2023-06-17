@@ -2,6 +2,7 @@
 
 import sys
 import os
+import getopt
 
 ENV = None
 
@@ -28,11 +29,16 @@ def use_os_env():
 
 def use_arg_env():
     global ENV
-    if len(sys.argv) > 1:
-        arg_env = sys.argv[1]
-        if is_valid_env_candidate_str(arg_env):
-            ENV = arg_env
-            print('命令行参数设置成功: ' + ENV)
+
+    try:
+        opts, args = getopt.getopt(sys.argv[1:], "e:", ["env="])
+        for opt, arg in opts:
+            if opt in ("-e", "--env"):
+                if is_valid_env_candidate_str(arg):
+                    ENV = arg
+                    print('命令行参数设置成功: ' + ENV)
+    except getopt.GetoptError:
+        pass
 
 
 def use_default_env():
