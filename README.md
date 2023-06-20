@@ -1,10 +1,14 @@
-# 一个轻量实用的、支持日志和 yaml 配置文件管理的 Python 项目脚手架
+# 一个轻量、使用的 Python 项目脚手架
+
+本项目是一个轻量实用的 Python 项目脚手架，集成了简单的日志，配置文件管理，处理了 python 脚本间的依赖关系，避免重复导入等问题。适用于各种 Python 项目（例如数据科学，web 服务器等任务）。
 
 该项目的博客在：[Python import 重复导入？Pycharm 导入路径不一致？规范项目结构的最佳实践 - 知乎](https://zhuanlan.zhihu.com/p/618340649)
 
 欢迎阅读
 
 # 功能
+
+- 依赖管理：使用 poetry 管理项目依赖
 - 日志管理：统一化日志格式，支持正常日志和错误日志的分割，分别输出到 stdout 和 stderr
 - 配置文件管理：根据不同环境加载不同配置文件。
 - 测试管理：使用 pytest 管理测试用例
@@ -131,7 +135,14 @@ debug 和 info level 的日志将输出到 stdout，warning 和 error level 的�
 
 如果程序没有接收到任何参数，或接受了 dev/test/prod 以外的参数，则默认使用 `dev` 环境。
 
-# 高级配置
+# 高级使用
+
+## 安装依赖
+直接用 poetry 安装项目依赖即可，poetry 会自动修改 `pyproject.toml` 文件管理依赖
+
+```bash
+poetry add <package-name>
+```
 
 ## 修改日志打印到控制台的输出 Level
 在 res 文件夹中配置各个环境的日志输出等级（可选）
