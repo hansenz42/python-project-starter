@@ -1,6 +1,6 @@
 # 一个轻量、实用的 Python 项目脚手架
 
-本项目是一个轻量实用的 Python 项目脚手架，集成了简单的日志，配置文件管理，处理了 python 脚本间的依赖关系，避免重复导入等问题。适用于各种 Python 项目（例如数据科学，web 服务器等任务）。
+本项目是一个轻量实用的 Python 项目脚手架，集成了简单的日志，配置文件管理，处理了 python 脚本间的依赖关系，避免重复导入等问题。适用于各种 Python 项目（例如数据科学，web 服务器等）。
 
 项目配置完毕后，你只需要在 src 目录下写代码即可。
 
@@ -71,7 +71,7 @@ IDE 打开项目后：
 
 ### 7.1 引入自己写的模块
 
-引入自己编写的模块时，使用 `src` 为起始的路径，如：
+引入自己编写的模块时，使用 `src` 作为根目录起始的路径，如：
 ```python
 # 例如，在 src/service 目录下写了一个 demo_service.py 文件，在其他文件中引入
 # 引入的文件路径不写 src，直接从 service 开始即可
@@ -140,7 +140,7 @@ debug 和 info level 的日志将输出到 stdout，warning 和 error level 的�
 # 高级使用
 
 ## 安装依赖
-直接用 poetry 安装项目依赖即可，poetry 会自动修改 `pyproject.toml` 文件管理依赖
+直接用 poetry 安装，会自动修改 `pyproject.toml` 文件
 
 ```bash
 poetry add <package-name>
