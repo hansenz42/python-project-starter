@@ -40,6 +40,24 @@ class LogManager:
         self.root_logger.addHandler(handler_out)
         self.root_logger.addHandler(handler_err)
 
+        # 根据配置文件判断，是否要写入到文件
+        try:
+            if config_manager.get_value(['log', 'to_file']):
+                # 写入到文件 (out)
+                file_handler_out = logging.FileHandler(config_manager.get_value(['log', 'output']))
+                file_handler_out.setLevel(logging.DEBUG)
+                file_handler_out.setFormatter(formatter)
+
+                # 写入到文件 (err)
+                file_handler_err = logging.FileHandler(config_manager.get_value(['log', 'error']))
+                file_handler_err.setLevel(logging.WARNING)
+                file_handler_err.setFormatter(formatter)
+
+                self.root_logger.addHandler(file_handler_out)
+                self.root_logger.addHandler(file_handler_err)
+        except Exception as e:
+            pass
+
     def get_logger(self, name):
         return logging.getLogger(name)
 

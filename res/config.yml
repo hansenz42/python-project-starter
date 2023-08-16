@@ -1,3 +1,11 @@
 env: dev
 log_level: debug
 version: 0.1-2023-06-06
+
+log:
+  # 是否将日志输出到文件
+  to_file: false
+  # out 文件路径
+  output: /var/log/zhorizon-middleware-out.log
+  # 错误 err 文件路径
+  error: /var/log/zhorizon-middleware-err.log
