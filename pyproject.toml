@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetry-scaffold"
+name = "python-project-starter"
 version = "0.1.0"
 description = ""
 authors = ["Hansen <xxxx@xxxx.com>"]

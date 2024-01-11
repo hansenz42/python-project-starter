@@ -31,11 +31,21 @@ curl -sSL https://install.python-poetry.org | python3 -
 git clone git@github.com:hansenz42/python_scaffold.git
 ```
 
-## 3 （可选）替换 poetry 的 python 版本
+## 3 （可选）修改 poetry 的配置
 项目默认 3.11 版本，如果你想使用其他版本，可：
-打开 `pyproject.toml` ，将 `python = "^3.11"` 替换为你想要的 python 版本
+修改 `pyproject.toml`
+```toml
+[tool.poetry]
+name = "PEOJECT NAME"
+# ...
+authors = ["YOUR NAME <YOUR-EMAIL@xxx.com>"]
 
-## 4 切换到项目根目录下，安装依赖
+[tool.poetry.dependencies]
+python = "^3.11"   #替换为你想使用的 python 版本
+```
+
+
+## 4 切换到项目根目录下，安装依赖，修改项目基本信息
 ```bash
 poetry install
 ```
