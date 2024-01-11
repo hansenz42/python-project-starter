@@ -32,7 +32,7 @@ git clone git@github.com:hansenz42/python_scaffold.git
 ```
 
 ## 3 （可选）修改 poetry 的配置
-项目默认 3.11 版本，如果你想使用其他版本，可：
+
 修改 `pyproject.toml`
 ```toml
 [tool.poetry]
