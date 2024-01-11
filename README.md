@@ -4,7 +4,7 @@
 
 项目配置完毕后，你只需要在 src 目录下写代码即可。
 
-该项目的博客在：[Python import 重复导入？Pycharm 导入路径不一致？规范项目结构的最佳实践 - 知乎](https://zhuanlan.zhihu.com/p/618340649)
+该项目的文章在：[🐍 python项目结构的最佳实践 | 窗棂之梦的知识图谱](https://www.windowdaydreaming.top/2023/06/19/python-project-structure/)
 
 欢迎阅读
 
