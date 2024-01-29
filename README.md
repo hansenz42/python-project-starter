@@ -28,7 +28,7 @@ curl -sSL https://install.python-poetry.org | python3 -
 
 ## 2 clone 本项目到本地
 ```bash
-git clone git@github.com:hansenz42/python_scaffold.git
+git clone git@github.com:hansenz42/python-project-starter.git
 ```
 
 ## 3 （可选）修改 poetry 的配置
