@@ -4,7 +4,7 @@
 
 项目配置完毕后，你只需要在 src 目录下写代码即可。
 
-该项目的文章在：[🐍 python项目结构的最佳实践 | 阿森的知识图谱](https://www.assen.top/2023/06/19/python-project-structure/)
+该项目的文章在：[🐍 python项目结构的最佳实践 | 阿森的知识图谱](https://www.windowdaydreaming.top/2023/06/19/python-project-structure/)
 
 欢迎阅读
 
