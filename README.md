@@ -4,7 +4,7 @@
 
 项目配置完毕后，你只需要在 src 目录下写代码即可。
 
-该项目的文章在：[🐍 python项目结构的最佳实践 | 阿森的知识图谱](https://www.windowdaydreaming.top/2023/06/19/python-project-structure/)
+该项目的文章在：[🐍 python项目结构的最佳实践 | 阿森的知识图谱](https://www.assen.top/2023/06/19/python-project-structure/)
 
 欢迎阅读
 
@@ -105,7 +105,7 @@ from component.ConfigManager import config_manager
 
 # 获取 yaml 中配置的变量 foo.bar
 try:
-    config_str = config_manager.get_value(['foo', 'bar'])
+    config_str = config_manager.get_value('foo', 'bar')
     # > test_paramter
     print(config_str)
 except KeyError:
