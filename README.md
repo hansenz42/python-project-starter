@@ -85,19 +85,21 @@ IDE 打开项目后：
 ```python
 # 例如，在 src/service 目录下写了一个 demo_service.py 文件，在其他文件中引入
 # 引入的文件路径不写 src，直接从 service 开始即可
-from server.demo_service import foo
+from service.demo_service import foo
 ```
+
+示例可见项目中的 `src/demo.py`
 
 ### 7.2 在代码中引入项目变量
 
-在 `config_xxx.yml` 设置一个项目变量 （xxx 为你要配置的环境）
+在 `res/config_xxx.yml` 设置一个项目变量 （xxx 为你要配置的环境）
 
 ```yaml
 foo: 
   bar: 'test_paramter'
 ```
 
-可在代码中使用以下方式引入，yaml 中的层级用字符串列表表示：
+可在代码中使用以下方式引入，yml 文件的变量：
 
 ```python
 # 引入 ConfigManager
@@ -115,7 +117,7 @@ except KeyError:
 
 ### 7.3 使用日志
 
-在代码中引入日志：
+在代码中引入日志功能：
 
 ```python
 from component.LogManager import log_manager
